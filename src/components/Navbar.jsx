@@ -12,22 +12,16 @@ const Navbar = () => {
       },
     });
 
-    navTween.fromTo(
-      "nav",
-      { backgroundColor: "transparent" },
-      {
-        backgroundColor: "#00000050",
-        backgroundFilter: "blur(10px)",
-        duration: 1,
-        ease: "power1.inOut",
-      }
-    );
+    navTween.to("nav", {
+      backgroundColor: "#00000050",
+      ease: "power1.inOut",
+    });
   });
 
   return (
-    <nav>
+    <nav className="backdrop-blur-sm">
       <div>
-        <a href="#home" className="flex items-center gap-2">
+        <a href="#home" className="flex items-center gap-2 ">
           <img src="/images/logo.png" alt="logo" />
           <p>Velvet Pour</p>
         </a>
