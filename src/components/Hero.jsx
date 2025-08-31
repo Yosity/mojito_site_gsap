@@ -22,7 +22,8 @@ const Hero = () => {
     heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
 
     gsap.from(heroSplit.chars, {
-      yPercent: 100,
+      opacity: 0,
+      yPercent: 65,
       duration: 1.8,
       ease: "expo.out",
       stagger: 0.06,
